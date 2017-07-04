@@ -31,14 +31,27 @@ public class TodoCreateActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String title = getViewText(R.id.title);
+                if(title.isEmpty()) {
+                    // タイトルが入力されていない
+                    Snackbar.make(view, "Please enter Todo title.", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+                    return;
+                }
+                String description = getViewText(R.id.description);
+                if(description.isEmpty()) {
+                    // 内容が入力されていない
+                    Snackbar.make(view, "Please enter Todo description.", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+                    return;
+                }
                 // TODOを保存
                 Todo todo = new Todo();
-                todo.title = getViewText(R.id.title);
-                todo.description = getViewText(R.id.description);
+                todo.title = title;
+                todo.description = description;
                 todo.isChecked = false;
                 repository.create(todo);
-                Snackbar.make(view, "Created Todo", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                finish();
             }
         });
 
