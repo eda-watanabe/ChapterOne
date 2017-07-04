@@ -8,7 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import jp.inc.eda.chapterone_master.R;
-import jp.inc.eda.chapterone_master.di.Module;
+import jp.inc.eda.chapterone_master.helper.Provider;
 import jp.inc.eda.chapterone_master.domain.model.OrmaDatabase;
 import jp.inc.eda.chapterone_master.infra.dao.TodoDao;
 import jp.inc.eda.chapterone_master.infra.repository.TodoRepository;
@@ -31,7 +31,7 @@ public class TodoCreateActivity extends AppCompatActivity {
             }
         });
 
-        Module module = new Module();
+        Provider module = new Provider();
         OrmaDatabase orma = module.provideOrma(this);
         TodoDao dao = new TodoDao(orma);
         TodoRepository repository = new TodoRepository(dao);

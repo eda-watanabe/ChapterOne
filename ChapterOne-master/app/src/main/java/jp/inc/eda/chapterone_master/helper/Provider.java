@@ -1,4 +1,4 @@
-package jp.inc.eda.chapterone_master.di;
+package jp.inc.eda.chapterone_master.helper;
 
 import android.content.Context;
 
@@ -10,7 +10,7 @@ import jp.inc.eda.chapterone_master.domain.model.OrmaDatabase;
  * Created by watanabe on 2017/07/04.
  */
 
-public class Module {
+public class Provider {
 
     public OrmaDatabase provideOrma(Context context) {
         return new OrmaDatabase.Builder(context)
