@@ -10,4 +10,30 @@
     tools:context="jp.inc.eda.chapterone_master.presentation.todocreate.TodoCreateActivity"
     tools:showIn="@layout/activity_todo_create">
 
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="タイトル" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="内容" />
+
+    </android.support.design.widget.TextInputLayout>
+
 </LinearLayout>
