@@ -31,6 +31,16 @@ public class TodoRepository {
         });
     }
 
+    public Observable<List<Todo>> getNonCheckedTodos() {
+        return Observable.create(new ObservableOnSubscribe<List<Todo>>() {
+            @Override
+            public void subscribe(@NonNull ObservableEmitter<List<Todo>> e) throws Exception {
+                e.onNext(dao.findEqNonChecked());
+                e.onComplete();
+            }
+        });
+    }
+
     public void create(Todo todo) {
         todo.createAt = System.currentTimeMillis();
         dao.insert(todo);

@@ -35,6 +35,10 @@ public class TodoDao {
         return orma.selectFromTodo().idEq(id).getOrNull(0);
     }
 
+    public List<Todo> findEqNonChecked() {
+        return null;
+    }
+
     public List<Todo> findAll() {
         return orma.selectFromTodo().toList();
     }
