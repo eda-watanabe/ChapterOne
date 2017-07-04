@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Chapter1</string>
+
+    <!-- launcher -->
+    <string name="launcher_title">Hello, Android!!</string>
+    <string name="title_activity_todo_list">TodoListActivity</string>
+    <string name="title_activity_todo_create">TodoCreateActivity</string>
+    <string name="title_activity_todo_edit">TodoEditActivity</string>
+    <!-- todo-list -->
+
+    <!-- todo-create -->
+
+    <!-- todo-edit -->
+
+</resources>
